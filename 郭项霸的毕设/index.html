@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>计算机实验室信息服务平台</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style type="text/css">
+        @media (max-width: 767px) {
+           nav a{
+            font-size: 12px;
+           }
+           .navbar-brand{
+            font-size: 12px;
+           }
+           .login{
+            height: 250px;
+            width: 70%;
+           }
+           .login_cont{
+            margin:20px auto;
+           }
+           .login_btn{
+            margin-bottom: 5px;
+           }
+           .login_cont input{
+            margin-bottom: 10px;
+           }
+           .login_link a{
+            font-size: 10px;
+            text-indent: 0;
+           }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+           nav a{
+            font-size: 12px;
+           }
+           .navbar-brand{
+            font-size: 12px;
+           }
+           .login{
+            height: 300px;
+            width: 40%;
+           }
+           .login_cont{
+            margin:10px auto;
+           }
+           .login_link a{
+            font-size: 10px;
+           }
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-inverse">
+    <div class="container">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">计算机实验室信息服务平台</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">机器使用状态查询</a></li>
+            <li><a href="#">课表安排查询</a></li>
+            <li><a href="#">预约机器</a></li>
+            <li><a href="#">机器续借</a></li>
+          </ul>
+        </li>
+        <li><a href="#tongzhi">通知</a></li>
+        <li><a href="#about">关于</a></li>
+        <li><a href="#contact">联系我们</a></li>
+      </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="请键入搜索内容">
+          </div>
+          <a href="#"><img src="images/search_32px_1113961_easyicon.net.png"></a>
+        </form></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</div>
+</nav>
+  <div class="banner">
+    <div class="container">
+      <div class="login fr">
+        <div class="login_cont">
+          <h2>账户登录</h2>
+          <form>
+            <input type="text" class="user" placeholder="用户名">
+            <input type="text" class="pwd" placeholder="密码">
+            <button type="submit" class="btn login_btn">登录</button>
+          </form>
+          <div class="login_link">
+            <a href="#">忘记登录密码</a>
+            <a href="#" class="zhuce">注册</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- banner结束 -->
+  <div class="container">
+    <div class="panel panel-primary">
+      <div id="tongzhi" class="panel-heading">通知<span><a href="#" style="color: #fff;">更多&gt;&gt;</a></span></div>
+      <div class="panel-body">
+        <ul class="list-group">
+          <li class="list-group-item"><a href="#">Cras justo odio</a><span>2016-3-17</span></li>
+          <li class="list-group-item"><a href="#">Dapibus ac facilisis in</a><span>2016-3-17</span></li>
+          <li class="list-group-item"><a href="#">Morbi leo risus</a><span>2016-3-17</span></li>
+          <li class="list-group-item"><a href="#">Porta ac consectetur ac</a><span>2016-3-17</span></li>
+          <li class="list-group-item"><a href="#">Vestibulum at eros</a><span>2016-3-17</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="function">
+          <a href="#"><img src="images/Computer_alt_96px_1179982_easyicon.net.png"><h3>机器使用状态查询</h3></a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="function">
+          <a href="#"><img src="images/search_query_96px_1063402_easyicon.net.png"><h3>课表安排查询</h3></a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="function">
+          <a href="#"><img src="images/Order_history_96px_1176965_easyicon.net.png"><h3>预约机器</h3></a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="function">
+          <a href="#"><img src="images/continue_play_96px_516610_easyicon.net.png"><h3>机器续借</h3></a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+        </div>
+      </div>
+    </div><!-- 栅栏布局结束 -->
+</div>
+    <div class="about" id="about">
+      <div class="container">
+        <h1>关于</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div><!-- 关于结束 -->
+    <div class="footer" id="contact">
+      <div class="container">
+        <div class="col-md-3 footer-left">
+          <h3>电话</h3>
+          <p>****************</p>
+        </div>
+        <div class="col-md-3 footer-left">
+          <h3>E-Mail</h3>
+          <p>Email : <a href="#">****@******</a></p>
+        </div>
+        <div class="col-md-3 footer-left">
+          <h3>关注我们</h3>
+          <ul>
+            <li><a href="#"><i class="qq"> </i></a></li>
+            <li><a href="#"><i class="weixin"> </i></a></li>
+            <li><a href="#"><i class="weibo"> </i></a></li>
+            <div class="clearfix"></div>  
+          </ul>
+        </div>
+        <div class="col-md-3 footer-left">
+          <h3>地址</h3>
+          <p>**********************</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

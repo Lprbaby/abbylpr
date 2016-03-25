@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>芒果网：酒店预订,酒店预定,酒店查询,机票预订,旅游度假,邮轮,门票,租车 飞一般的旅行网</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>
+	<script type="text/javascript">
+		myFocus.set({id:'picBox',width:650,height:278})
+	</script>
+</head>
+<body>
+	<div class="top">
+		<div class="w980">
+			<div class="top_left fl">
+				<p>您好！请<a href=""> 登录 </a>|<a href=""> 注册 </a></p>
+			</div>
+			<div class="top_right fr">
+			<p class="top">
+				<a href="#" target=_blank>帮助</a> <span>|</span> 
+				<a href="#" target=_top>芒果知道</a> <span>|</span> 
+				<a href="#" target=_top>合作卡</a> <span>|</span> 
+				<a href="#" target=_blank>积分商城</a> <span>|</span> 
+				<span id=baibao class=baibao>百宝箱 
+		             <em style="display: none" id=mybaibao class="topdrop mybaibao">
+		             <a href="#" target=_blank>旅游常识</a> 
+		             <a href="#" target=_blank>机票助手</a> 
+		             <a href="#" target=_blank>机票预约</a> 
+		             <a href="#" target=_blank>火车查询</a></em></span><span>|</span> 
+		        <span id=account class=account>我的账户 
+		             <em style="display: none" id=myaccount class="topdrop myaccount">
+				     <a href="#" target=_blank>我的订单</a> 
+				     <a href="#" target=_blank>现金账户</a> 
+				     <a href="#" target=_blank>我的会籍</a> 
+				     <a href="#" target=_blank>我的积分</a> <a href="#" target=_blank>我的代金券</a> </em></span>
+			</div>
+			<script type="text/javascript" src="js/topdrop.js"></script>
+		</div>
+	</div><!-- top结束 -->
+	<div class="header w980">
+		<div class="head_left fl">
+			<img src="images/logo_02.png">
+		</div>
+		<div class="head_right">
+		    <img src="images/top0.jpg">
+			<div class="version fr">
+				<a href="#">繁体版</a>
+				<a href="#">手机版</a>
+				<a href="#">青芒果</a>
+				<a href="#">社区</a>
+			</div>
+		</div>
+	</div><!-- header结束 -->
+	<nav>
+		<ul>
+			<li ><a href="#" class="active"><span>首页</span></a></li>
+			<li><a href="#"><span>旅游度假</span></a></li>
+			<li><a href="#"><span>国内酒店</span></a></li>
+			<li><a href="#"><span>海外酒店</span></a></li>
+			<li><a href="#"><span>国内机票</span></a></li>
+			<li><a href="#"><span>国际机票</span></a></li>
+			<li><a href="#"><span>租车</span></a></li>
+			<li><a href="#"><span>邮轮</span></a></li>
+			<li><a href="#"><span>门票</span></a></li>
+			<li><a href="#"><span>签证</span></a></li>
+			<li><a href="#"><span>企业客户</span></a></li>
+			<li><a href="#"><span>旅游指南</span></a></li>
+			<li><a href="#"><span>新闻资讯</span></a></li>
+		</ul>
+	</nav><!-- nav结束 -->
+	<div class="focus w980 clearfix">
+		<div class="focus_left fl">
+			<div class="focus_l_title">
+				<h2>开始计划您的行程</h2>
+			</div>
+			<div class="focus_l_cont">
+				<dl id=selectsearch>
+				  <dt id=dt_travel class=on>度假</dt>
+				  <dd class=searchdd>
+					  <form method=post action="">
+					  <div class=searchul>
+					  <ul>
+					    <li class=w210> <label>出发地：</label><span class=select_label><input id=originid class=w197 value=深圳 readonly type=text ></span></li>
+					    <li class=w210><label>目的地：</label><span class=select_label><input class=w197 value=中文/拼音首字母 type=text ></span></li>
+					    <li class=w210><label>关键字：</label><span class=input_label><input class=w197 value=请输入产品名称/景点 type=text ></span></li></ul></div>
+					  <div class=btnwrap><img src="images/button.png"></div></form></dd>
+				  <dt id=dt_hotel>酒店</dt>
+				  <dd class=searchdd style="display: none;">
+					  <form method=post action="">
+					  <p class="producttype">
+						<input id="gnhotel" type="radio" checked="checked" value=""><label for="gnhotel">国内</label><input id="gahotel" type="radio" value=""><label for="gahotel">港澳</label><label>&nbsp;<a target="_blank" href="#">台湾&gt;&gt;</a></label><label>&nbsp;<a target="_blank" href="#">海外酒店&gt;&gt;</a></label></p>
+					  <div class=searchul>
+						  <ul>
+						    <li class=w210><label>入住城市：</label><span class=select_label><input class="w197 mgcity" title=hotel value=中文/拼音 type=text></span></li>
+						    <li class=w105><label>入住日期：</label><span class=date_label><input class=w92 type=text ></span></li>
+						    <li class=w105><label>离店日期：</label><span class=date_label><input class=w92 type=text ></span></li>
+						    <li class=w105><label>价格范围：</label><span class=select_label><input class=w92 value=不限 type=text></span></li>
+						    <li class=w105><label>酒店名称：</label><span class=input_label><input class=w92 type=text></span></li></ul></div>
+					  <div class=btnwrap><img src="images/button.png"></div></form></dd>
+				  <dt id=dt_flight>机票</dt>
+				  <dd class=searchdd style="display: none;">
+					  <form method=post action="">
+					  <p class="producttype flighttype"><input value=ow checked type=radio><label>单程</label> <input id= 
+					  value=rt type=radio><label>往返</label></p>
+					  <div class=searchul>
+						  <ul>
+						    <li class=w105><label>出发城市：</label><span class=select_label><input 
+						    id=id_startcity class="w92 mgcity" title=flight value=中文/拼音 type=text ></span></li>
+						    <li class=w105><label>到达城市：</label><span class=select_label><input 
+						    id=id_endcity class="w92 mgcity" title=flight value=中文/拼音 type=text ></span></li>
+						    <li class=w105><label>出发日期：</label><span class=date_label><input id=id_startdate class=w92 type=text></span></li>
+						    <li class=w105><label>出发时间：</label><span class=select_label><input id=id_starttime class=w92 value=全部 type=text name=""></span></li></ul></div>
+					  <div class=btnwrap><img src="images/button.png"></div></form></dd>
+				  <dt id=dt_zuche>租车</dt>
+				  <dd class=searchdd style="display: none;">
+					  <form method=post  action=""><input id=homecity_namecode type=hidden> 
+					  <div class=searchul>
+						  <ul>
+						    <li class=w210><label>取车城市：</label><span class=select_label><input id="car_cityname" class="w197" type="text" value="中文/拼音" title="car"></span></li>
+						    <li class=w210><label>取车区域：</label><span class=select_label><input id=distr class=w197 type=text name=""></span></li>
+						    <li class=w105><label>取车时间：</label><span class=date_label><input id=enddate class=w92 type=text></span></li>
+						    <li class=w105><label>&nbsp;</label><span class=sm_select_label><input id=taketime class=w92 value=08:00 type=text name=""></span></li>
+						    <li class=w105><label>还车时间：</label><span class=date_label><input id=enddate class=w92 type=text></span></li>
+						    <li class=w105><label>&nbsp;</label><span class=sm_select_label><input id=returntime class=w92 value=08:00 type=text name=""></span></li></ul></div>
+					  <div class="btnwrap carbtnwrap"><img src="images/button.png"></div></form></dd>
+				  <dt id=dt_youlun>邮轮</dt>
+				  <dd class=searchdd style="display: none;">
+					  <form method=post name=searchform 
+					  action="">
+					  <div class=searchul>
+						  <ul>
+						    <li class=w210><label>邮轮公司：</label> <select id=shipcmpyid class="w203 sw135" > <option selected value=0>请选择</option> <option value=71>丽星邮轮公司</option> <option value=51>皇家加勒比国际游轮有限公司</option> <option value=131>地中海邮轮公司</option> <option value=31>歌诗达邮轮公司</option> <option value=91>公主邮轮</option></select></li>
+						    <li class=w105><label>开航日期：</label><select id=starttime class="w98 sw135" name=starttime> <option selected value=0>请选择</option> <option value=1>2015-03</option> <option value=2>2015-04</option> <option value=3>2015-05</option> <option value=4>2015-06</option> <option value=5>2015-07</option> <option value=6>2015-08</option> <option value=7>2015-09</option> <option value=8>2015-10</option> <option value=9>2015-11</option> <option value=10>2015-12</option></select></li>
+						    <li class=w105><label>航线天数</label> <select id=linedays class="w98 sw135" name=linedays> <option selected value=0>请选择</option> <option value=1>3天以内</option> <option value=2>4-7天</option> <option value=3>8-14天</option> <option value=4>14天以上</option></select> </li>
+						    <li class=w210><label>上船地点</label> <select id=startcity class=w98> <option selected value=0>请选择</option> <option value=sha>上海</option> <option value=hkg>香港</option> <option value=pen>槟城</option> <option value=yidali>意大利</option> <option value=beijing>北京</option> <option value=guangzhou>广州</option> <option value=meiguo>美国</option></select> </li></ul></div>
+					  <div class=btnwrap><img src="images/button.png"></div></form></dd>
+				  <dt id=dt_piao>门票</dt>
+				  <dd class=searchdd style="display: none">
+					  <form id=queryticketform method=post 
+					  action=""><input 
+					  id=pageno value=1 type=hidden name=page.pageno> 
+					  <div class=searchul>
+						  <ul>
+						    <li class=w210><label>景点名称：(如海泉湾)</label><span class=input_label><input 
+						    id=input_dest class=w197 type=text name=input_dest></span></li></ul></div>
+					  <div class=btnwrap><img src="images/button.png"></div></form>
+				  <div class=piaohot><em>景点所在地区：</em> 
+				  <p><a href="#" target=_blank>深圳</a> <a href="#" target=_blank>香港</a> <a href="#" target=_blank>北京</a> <a href="#" target=_blank>珠海</a></p><em>热门景点：</em> 
+				  <p><a href="#">锦绣中华</a> 
+				  <a href="#">东部华侨城</a> 
+				  <a href="#">欢乐谷</a> 
+				  <a href="#">香港迪士尼乐园</a> 
+				  <a href="#">香港海洋公园</a></p></div></dd></dl>
+			</div>
+			<script type="text/javascript">
+				$("dt").click(function(){
+	                $("dt").next("dd").hide();
+                    $("dt").removeClass("on");
+	                $(this).next("dd").show();
+	                $(this).addClass("on");
+	            });
+			</script>
+		</div><!-- focus_left结束 -->
+		<div class="focus_right fr">
+			<div id="picBox">
+				<div class="loading"><img src="images/loading.gif" alt="图片加载中"></div>
+				<div class="pic">
+					<ul>
+						<li><img src="images/banner1.jpg"></li>
+						<li><img src="images/banner2.jpg"></li>
+						<li><img src="images/banner3.jpg"></li>
+						<li><img src="images/banner4.jpg"></li>
+						<li><img src="images/banner5.jpg"></li>
+						<li><img src="images/banner6.jpg"></li>
+						<li><img src="images/banner7.jpg"></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- focus_right结束 -->
+	</div>
+	<div class="main w980 clearfix">
+		<div class="main_left fl">
+			<div class="recash">
+				<p class="recash_num">已经有<strong><span>31943</span></strong>人拿到了<strong>返现</strong></p>
+				<ul>
+					<li><a href="#"><strong>订酒店<span>返</span>现金</strong>&nbsp;<em>奖励规则及常见问题</em></a></li>
+					<li class="nobor"><a href="#"><strong>保证到店有房</strong>&nbsp;<em>价格保证三倍赔付</em></a></li>
+				</ul>
+			</div>
+			<div class="pro_flight">
+				<div class="pro_tit">
+					<h2><a href="#">特价机票</a></h2>
+					<a href="#" class="viewmore">更多&gt;&gt;</a>
+				</div>
+				<div class="pro_list">
+					<div class="tabnav">
+						<div class="tabnavWrap">
+							<ul style="width: 500px;" id="flightul">
+								<li><a class="on" href="#">北京</a></li>
+								<li><a href="#">上海</a></li>
+								<li><a href="#">广州</a></li>
+								<li><a href="#">深圳</a></li>
+								<li><a href="#">成都</a></li>
+								<li><a href="#">南京</a></li>
+								<li><a href="#">武汉</a></li>
+								<li><a href="#">重庆</a></li>
+								<li><a href="#">杭州</a></li>
+								<li><a href="#">三亚</a></li>
+							</ul>
+						</div>
+						<p class="fixtab">
+							<a href="###" class="prevtab" id="flightprev"></a>
+							<a href="###" class="nexttab" id="flightnext"></a>
+						</p>
+					</div>
+					<div class="gncitys">
+						<ul>
+							<li>
+							    <span>北京→上海</span>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+							</li>
+							<li>
+								<span>北京→深圳</span>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+							</li>
+							<li>
+							    <span>北京→成都</span>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+							</li>
+							<li>
+							    <span>北京→昆明</span>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+								<a href="#"><em>&yen;1020</em>04-24</a>
+							</li>
+						</ul>
+					</div>
+					<h3 class="gwtit">国际机票</h3>
+					<div class="gjcitys">
+						<ul>
+							<li>
+								<span class="airline">上海→首尔</span>
+								<span class="airlinetype">单程</span>
+								<a href="#" class=price><em class="yen">&yen;850</em></a>
+							</li>
+							<li>
+								<span class="airline">上海→香港</span>
+								<span class="airlinetype">单程</span>
+								<a href="#"><em>&yen;1600</em></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- 特价机票结束 -->
+			<div class="pro_hotel">
+				<div class="pro_tit">
+					<h2 class="protab"><a href="#">特价酒店</a></h2>
+					<a href="#" class="viewmore">更多&gt;&gt;</a>
+				</div>
+				<div class="pro_list">
+					<div class="tabnav" id="hotelnav">
+						<div class="tabnavWrap" id="hotelwrap">
+							<ul style="width: 500px" id="hotelul">
+								<li><a class="on" href="#">北京</a></li>
+								<li><a href="#">上海</a></li>
+								<li><a href="#">广州</a></li>
+								<li><a href="#">深圳</a></li>
+								<li><a href="#">成都</a></li>
+								<li><a href="#">南京</a></li>
+								<li><a href="#">武汉</a></li>
+								<li><a href="#">重庆</a></li>
+								<li><a href="#">杭州</a></li>
+								<li><a href="#">三亚</a></li>
+							</ul>
+						</div>
+						<p class="fixtab">
+							<a href="###" class="prevtab" id="hotelprev"></a>
+							<a href="###" class="nexttab" id="hotelnext"></a>
+						</p>
+					</div>
+					<div class="tabpanel">
+						<ul>
+							<li><span class="txtcut txtit"><a href="#">北京远通维景国际大酒店</a></span><em>&yen;702起</em></li>
+							<li><span class="txtcut txtit"><a href="#">金茂北京威斯汀大饭店</a></span><em>&yen;899起</em></li>
+							<li><span class="txtcut txtit"><a href="#">北京贵宾楼饭店</a></span><em>&yen;788起</em></li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- 特价酒店结束 -->
+			<div class="leftbaner">
+				<a href="#"><img src="images/banner12.jpg" alt="住香港找芒果"></a>
+			</div>
+			<div class="qmango">
+				<div class="pro_tit">
+					<h2 class="protab"><a href="#">青芒果客栈</a></h2>
+					<a href="#" class="viewmore">更多&gt;&gt;</a>
+				</div>
+				<div class="pro_list">
+					<div class="tabnav">
+						<div class="tabnavWrap">
+							<ul style="width: 500px" id="qmangoul">
+								<li><a class="on" href="#">北京</a></li>
+								<li><a href="#">上海</a></li>
+								<li><a href="#">广州</a></li>
+								<li><a href="#">深圳</a></li>
+								<li><a href="#">成都</a></li>
+								<li><a href="#">南京</a></li>
+								<li><a href="#">武汉</a></li>
+								<li><a href="#">重庆</a></li>
+								<li><a href="#">杭州</a></li>
+								<li><a href="#">三亚</a></li>
+							</ul>
+						</div>
+						<p class="fixtab">
+							<a href="#" class="prevtab" id=""></a>
+							<a href="#" class="nexttab"></a>
+						</p>
+					</div>
+				    <div class="tabpanel">
+				    	<ul>
+				    		<li><span class="txtcut txtit"><a href="#">香港新豪华宾馆(尖沙咀)</a></span><em>&yen;650起</em></li>
+				    		<li><span class="txtcut txtit"><a href="#">香港龙汇宾馆(尖沙咀)</a></span><em>&yen;699起</em></li>
+				    		<li><span class="txtcut txtit"><a href="#">香港新中华宾馆(尖沙咀)</a></span><em>&yen;788起</em></li>
+				    	</ul>
+				    </div>
+				</div>
+			</div>
+			<div class="chat">
+				<div class="pro_tit">
+					<h2 class="protab"><a href="#">用户评论</a></h2>
+					<p class="fixtab">
+						<a href="#" class="prevtab"></a>
+						<a href="#" class="nexttab"></a>
+					</p>
+			    </div>
+			    <div class="chatwrap">
+			    	<ul>
+			    		<li>
+			    		<div class="chathead">
+			    			<strong class="hotelname txtcut">
+			    				<a href="#">维也纳酒店（深圳春风店）</a>
+			    			</strong>
+			    			<span class="fullcode">满分：<em>5</em></span>
+			    			<span class="chatcode">评分：<em>4.3</em></span>
+			    		</div>
+			    		<p class="chatbody">
+			    			<em class="username">0000113046</em>
+			    			<a href="#">这次和女朋友住的商务数码房，带电脑的，房间空间很大，有30平米，落地玻璃面对花园小区，风景很好，很安静，电脑是三星32寸液晶屏的电视一体机，卫浴间也很大，超爽，一次就住了一个星期，强烈推荐维也纳春风店！</a>
+			    		</p></li>
+			    	</ul>
+			    </div>
+			</div>
+			<div class="hotline">
+				<div class="pro_tit">
+					<h2 class="protab"><a href="#">热点目的地</a></h2>
+					<a href="#" class="viewmore">更多&gt;&gt;</a>
+			    </div>
+			    <div class="hotlinelist">
+			    	<ul>
+			    		<li>
+			    			<div class="imgwrap"><a href="#"><img src="images/mdd1.jpg" alt=""></a></div>
+			    			<p class="linetit"><a href="#">新加坡</a></p>
+			    		</li>
+			    		<li>
+			    			<div class="imgwrap"><a href="#"><img src="images/mdd2.jpg" alt=""></a></div>
+			    			<p class="linetit"><a href="#">曼谷</a></p>
+			    		</li>
+			    		<li>
+			    			<div class="imgwrap"><a href="#"><img src="images/mdd3.jpg" alt=""></a></div>
+			    			<p class="linetit"><a href="#">香港</a></p>
+			    		</li>
+			    	</ul>
+			    </div>
+			</div>
+		    <script type="text/javascript">
+			    $(function(){
+			    	$("#flightprev").click(function(){
+			    		$("#flightul").animate({marginLeft: "-=35px"}, 100);
+			    		var margin_l=$("#flightul").css("marginLeft");
+			    		if (margin_l=="-105px") {
+			    			$("#flightul").stop();
+			    		}
+			    	})
+			    	$("#flightnext").click(function(){
+			    		$("#flightul").animate({marginLeft: "+=35px"}, 100);
+			    		var margin_l=$("#flightul").css("marginLeft");
+			    		if (margin_l=="0px") {
+			    			$("#flightul").stop();
+			    		}
+			    	})
+			    	
+			    })
+				$("#flightul a").hover(function(){
+                     $("#flightul a").removeClass("on");
+                     $(this).addClass("on");
+                });
+				$("#hotelul a").hover(function(){
+                     $("#hotelul a").removeClass("on");
+                     $(this).addClass("on");
+                });
+				$("#qmangoul a").hover(function(){
+                     $("#qmangoul a").removeClass("on");
+                     $(this).addClass("on");
+                });
+            </script>
+		</div><!-- main_left结束 -->
+		<div class="main_mid fl">
+			<div class="travel">
+				<div class="pro_tit" id="protit">
+					<h2 class="protab"><a href="#">度假线路</a></h2>
+					<a href="###" class="viewmore citydrop" id="travela"><span>深圳</span>出发</a>
+					<div id="traveline" class="dropcity" style="left: 858.5px; top: 503px;display: none;">
+						<a href="#">北京</a>
+						<a href="#">广州</a>
+						<a href="#">上海</a>
+						<a href="#">深圳</a>
+					</div>
+				</div>
+				<div class="travellines">
+					<ul>
+						<li class=totop>
+                        <div class=detail><span class=price><strong>&yen;199</strong>起</span> <a class=a66x20 href="#">查看行程</a> </div><div class=viewimg><img alt=南昆山温泉大观园“泉心体验”2天特惠自驾游 src="images/sz-1.jpg"></div><div class=viewtit><h3><a title=南昆山温泉大观园“泉心体验”2天特惠自驾游 href="#" >南昆山温泉大观园“泉心体验”2天特惠自驾游</a></h3><p>推荐理由：4月惊喜4折回馈，每日限售20间！</p></div></li>
+					    <li class=totop>
+					    <div class=detail><span class=price><strong>&yen;2,868</strong>起</span> 
+					    <a class=a66x20 href="#">查看行程</a> </div><div class=viewimg><img alt=奇美黄山+宏村+古城衢州4天豪华美食双飞团 src="images/sz-2.jpg"></div><div class=viewtit><h3><a title=奇美黄山+宏村+古城衢州4天豪华美食双飞团 href="#" >奇美黄山+宏村+古城衢州4天豪华美食双飞团</a></h3><p>推荐理由：畅游黄山，品徽菜、吃衢州农家宴</p></div></li>
+					    <li class=totop>
+					    <div class=detail><span class=price><strong>&yen;3,580</strong>起</span> <a class=a66x20 href="#">查看行程</a> </div><div class=viewimg><img alt=纯玩团-巴厘岛6天4晚团队游（香港往返） src="images/sz-3.jpg"></div><div class=viewtit><h3><a title=纯玩团-巴厘岛6天4晚团队游（香港往返） href="#" >纯玩团-巴厘岛6天4晚团队游（香港往返）</a></h3><p>推荐理由：巴厘岛精华纯玩，海岛魅力体验！</p></div></li>
+					    <li><span class="txtit txtcut"><a title=珠海海泉湾大酒店+海洋温泉+神秘岛乐园/梦幻剧场自驾游套餐 href="#" >珠海海泉湾大酒店+海洋温泉+神秘岛乐园/梦幻剧场自驾游套餐</a></span><em class=price><strong>&yen;490</strong>起</em></li>
+					    <li><span class="txtit txtcut"><a title=香港特惠自由行（可延住） href="#" >香港特惠自由行（可延住）</a></span><em class=price><strong >&yen;365</strong>起</em></li>
+					    <li><span class="txtit txtcut"><a title=荷兰郁金花香+德国自驾11天 href="#" >荷兰郁金花香+德国自驾11天</a></span><em class=price><strong >&yen;39,800</strong>起</em></li>
+					    <li><span class="txtit txtcut"><a title=华东五市+乌镇香市水乡狂欢节5天双飞优质团  href="#" >华东五市+乌镇香市水乡狂欢节5天双飞优质团</a></span><em class=price><strong >&yen;2,879</strong>起</em></li>
+					    <li><span class="txtit txtcut"><a title=花满皇城北京品质五星双飞5天团队游 href="#" >花满皇城北京品质五星双飞5天团队游</a></span><em class=price><strong>&yen;3,050</strong>起</em></li>
+					</ul>
+				</div>
+			</div><!-- 度假线路结束 -->
+			<div class="zuche">
+				<div class=pro_tit>
+					<h2 class=protab><a href="#">热门租车</a></h2>
+					<a class=viewmore href="#">更多&gt;&gt;</a>
+				</div>
+				<div class=pro_list>
+					<div class=tabnav>
+						<ul>
+						  <li><a class=on href="#">自驾</a></li>
+						</ul>
+						<a id="zuchea" class="viewmore citydrop" href="###"><span id=zuchecity>深圳</span>出发</a> 
+						<div id="zulist" class="zuchecitys" style="left: 857.5px; top: 956px;display: none;">
+						<a href="#">北京</a>
+						<a href="#">广州</a>
+						<a href="#">上海</a>
+						<a href="#">深圳</a>
+					</div>
+					</div>
+				</div>
+				<div class=zuchelist>
+					<ul>
+					  <li><span class=carname><a href="#">标致207</a></span><span class=price><em>&yen;88.0</em>起</span></li>
+					  <li><span class=carname><a href="#">标致207</a></span><span class=price><em>&yen;88.0</em>起</span></li>
+					  <li><span class=carname><a href="#">雪佛兰新赛欧</a></span><span class=price><em>&yen;88.0</em>起</span></li>
+					  <li><span class=carname><a href="#">雪佛兰乐驰</a></span><span class=price><em>&yen;89.0</em>起</span></li>
+					  <li><span class=carname><a href="#">大众普桑</a></span><span class=price><em>&yen;98.0</em>起</span></li>
+					  <li><span class=carname><a href="#">华晨骏捷frv</a></span><span class=price><em>&yen;98.0</em>起</span></li>
+					</ul>
+			    </div>
+			</div><!-- 租车结束 -->
+			<div class="menpiao">
+				<div class=pro_tit>
+				<h2 class=protab><a href="#">畅销门票</a></h2><a class=viewmore href="#">更多&gt;&gt;</a> </div>
+				<div>
+					<table cellspacing=0 cellpadding=0>
+					  <thead>
+					  <tr>
+					    <th>
+					      <div class=piaoname>景点名</div></th>
+					    <th class=w65>门市价</th>
+					    <th class=w82>芒果价</th></tr></thead>
+					  <tbody>
+					  <tr>
+					    <td>
+					      <div class=piaoname><a title=香港海洋公园门票成人票(全国包邮） href="#">香港海洋公园门票成人票(全国包邮）</a></div></td>
+					    <td class=w65><span class=delprice>&yen;215</span></td>
+					    <td class=w82><em>&yen;185</em></td></tr>
+					  <tr>
+					    <td>
+					      <div class=piaoname><a title=香港迪士尼乐园指定日门票成人票(全国包邮） href="#" >香港迪士尼乐园指定日门票成人票(全国包邮）</a></div></td>
+					    <td class=w65><span class=delprice>&yen;308</span></td>
+					    <td class=w82><em>&yen;280</em></td></tr>
+					  <tr>
+					    <td>
+					      <div class=piaoname><a title=深圳欢乐谷门票成人票(全国包邮） 
+					      href="#">深圳欢乐谷门票成人票(全国包邮）</a></div></td>
+					    <td class=w65><span class=delprice>&yen;180</span></td>
+					    <td class=w82><em>&yen;170</em></td></tr></tbody>
+					</table>
+				</div>
+			</div><!-- 畅销门票结束 -->
+			<div class="youlun">
+				<div class=pro_tit>
+					<h2 class=protab><a href="#">热卖邮轮推荐</a></h2><a class=viewmore href="#">更多&gt;&gt;</a> 
+			    </div>
+				<div class=youlunrecomm>
+					<div class=imgwrap><img alt=歌诗达邮轮“经典号”上海+仁川+济州+上海5天海上假期 src="images/ship.jpg"></div>
+					<div class=txtwrap><p class=youlun><a href="#">歌诗达邮轮“经典号”上海+仁川+济州+上海5天海上假期</a></p>
+					<p class=ylinfo>行程天数：5天 出发日期：05-09,13,17,21,25 上船地点：上海</p>
+					<p>价格：<strong>rmb1,999起</strong></p></div>
+				</div>
+			</div><!-- 游轮结束 -->
+			<div class="community">
+				<div class=pro_tit>
+					<h2 class=protab><a href="#">热点推荐</a></h2><a class=viewmore href="#">更多&gt;&gt;</a> 
+				</div>
+				<div class=hottie>
+					<ul>
+					  <li><strong class=commpanel><a href="#">芒果画报</a></strong><span class=commtit><a href="#">2个人 一辆车 3000公里墨尔本自由行</a></span></li>
+					  <li><strong class=commpanel><a href="#">行游天下</a></strong><span class=commtit><a href="#">2011五一古镇旅游指南</a></span></li>
+					  <li><strong class=commpanel><a href="#">美食天下</a></strong><span class=commtit><a href="#">2011五一上海旅游指南</a></span></li>
+					  <li><strong class=commpanel><a href="#" >时尚购物</a></strong><span class=commtit><a href="#" >2011五一成都旅游指南</a></span></li>
+					  <li><strong class=commpanel><a href="#" >娱乐天下</a></strong><span class=commtit><a href="#">听售楼小姐18句良心话 2011年买房绝不被忽悠</a></span></li>
+					  <li><strong class=commpanel><a href="#">芒果资讯</a></strong><span class=commtit><a href="#">南方航空开通广州直飞新西兰航线</a></span></li>
+					</ul>
+				</div>
+			</div><!-- 热点推荐结束 -->
+			<script type="text/javascript">
+				$("#travela").click(function(){
+					$("#traveline").show();
+					$("#travela").addClass('isclick');
+				})
+				$("#protit").mouseleave(function(){
+                    $("#traveline").hide();
+				    $("#travela").removeClass('isclick');
+				})
+				$("#zuchea").click(function(){
+					$("#zulist").show();
+					$("#zuchea").addClass('isclick');
+				})
+				$("#zulist").mouseleave(function(){
+                    $("#zulist").hide();
+				    $("#zuchea").removeClass('isclick');
+				})
+			</script>
+		</div><!-- main_mid结束 -->
+		<div class="main_right fr">
+			<div class="probox zhuanji">
+				<div class=pro_tit>
+				   <h2 class=protab><a href="#">热门专辑</a></h2><a class=viewmore href="#">更多&gt;&gt;</a> 
+				</div>
+				<div>
+					<ul>
+					  <li><a href="#">芒果专享“1850”罗马往返中国</a></li>
+					  <li><a href="#">深发展信用卡订机票酒店享好礼！</a></li>
+					  <li><a href="#">芒果租车400减100.优惠大酬宾</a></li>
+					  <li><a href="#">花花世界，谁最诱惑你的眼球</a></li>
+					  <li><a href="#">青芒果优选，青日踏青客栈！</a></li>
+					  <li><a href="#">建行欧洲旅行龙卡直降1000元特推酒店</a></li>
+					</ul>
+			    </div>
+			</div><!-- 热门专辑结束 -->
+			<div class="imgbox">
+				<ul>
+					<li><a href="#"><img src="images/banner13_03.jpg"></a></li>
+					<li><a href="#"><img src="images/banner14_03.jpg"></a></li>
+				</ul>
+			</div>
+			<div class="probox tuangou">
+				<div class=pro_tit>
+				  <h2 class=protab><a href="#">芒果团购</a></h2>
+				</div>
+				<div class=tuantit><strong><a href="#">香港润迅手机卡</a></strong><br>(低至0.1元/分钟)</div>
+				<div class=tuanprice><em class=price>现价：<strong>¥29</strong></em> <a class=detail href="#" >查看详情</a></div>
+				<div class=tuanpricelist>
+					<table cellspacing=0 cellpadding=0>
+					  <thead>
+					  <tr>
+					    <th>原价</th>
+					    <th>折扣</th>
+					    <th>节省</th></tr></thead>
+					  <tbody>
+					  <tr>
+					    <td><em class=delprice>¥100</em></td>
+					    <td>2.9折</td>
+					    <td><em class=yen>¥71</em></td></tr></tbody></table>
+				</div>
+			</div><!-- 芒果团购结束 -->
+			<div class="probox travelnews">
+				<div class=pro_tit>
+				<h2 class=protab><a href="#">旅游新闻</a></h2><a class=viewmore href="#">更多&gt;&gt;</a> 
+				</div>
+				<div>
+				<ul>
+				  <li><a href="#">加强高收入者个人所得税征管</a></li>
+				  <li><a href="#">南沙妈祖文化旅游节将于本月举行</a></li>
+				  <li><a href="#">旅游微博成时尚营销方式</a></li>
+				  <li><a href="#">大运会理念公布</a></li>
+				  <li><a href="#">英国威廉王子大婚细节出炉</a></li>
+				  <li><a href="#">史上最大规模空乘招募“海选”</a></li></ul>
+				</div>
+			</div><!-- 旅游新闻结束 -->
+			<div class="imgbox">
+				<ul>
+					<li><a href="#"><img src="images/banner15_03.jpg"></a></li>
+					<li><a href="#"><img src="images/banner16_06.jpg"></a></li>
+				</ul>
+			</div>
+			<div class=mangotools>
+				<ul>
+				  <li><span class=gline>|</span><a href="#" >机票预约</a></li>
+				  <li class=hb><span class=gline>|</span><a href="#">机票助手</a></li>
+				  <li class=qz><span class=gline>|</span><a href="#">代办签证</a></li>
+				  <li class=ly><span class=gline>|</span><a href="#">旅游常识</a></li>
+				  <li class=hl><span class=gline>|</span><a href="#">汇率查询</a></li>
+				  <li class=hc><span class=gline>|</span><a href="#">火车查询</a></li>
+				</ul>
+			</div><!-- mangotools结束 -->
+		</div>
+		<div class="botbaner">
+			<a href="#"><img src="images/banner11.jpg" alt="广交会预付酒店专区"></a>
+		</div><!-- main_right结束 -->
+	</div><!-- main结束 -->
+	<div class="whychoice w978 clearfix">
+		<div class=advantwrap>
+			<div class="advpanel w197">
+				<h2>新手指南</h2>
+				<ul>
+				  <li>-<a href="#">网站注册流程指引</a></li>
+				  <li>-<a href="#">机票产品预订</a></li>
+				  <li>-<a href="#">酒店产品预订</a></li>
+				  <li>-<a href="#">度假产品预订</a></li>
+				</ul>
+		    </div>
+			<div class="advpanel w241">
+				<h2>常见问题</h2>
+				<ul>
+				  <li>-<a href="#">网站预订流程指引</a></li>
+				  <li>-<a href="#">现金及现金帐户</a></li>
+				  <li>-<a href="#">网站支付</a></li>
+				  <li>-<a href="#">网站问题建议/反馈</a></li>
+				</ul>
+			</div>
+			<div class="advpanel w235">
+				<h2>会员积分</h2>
+				<ul>
+				  <li>-<a href="#">会员权益及积分常见问题</a></li>
+				  <li>-<a href="#">网站预订享受双倍积分</a></li>
+				  <li>-<a href="#">芒果网会员积分规则</a></li>
+				  <li>-<a href="#">会员积分礼品兑换</a></li>
+				</ul>
+			</div>
+			<div class="advpanel w240">
+				<h2>特色栏目</h2>
+				<ul>
+				  <li>-<a href="#">团购频道</a></li>
+				  <li>-<a href="#">积分商城</a></li>
+				  <li>-<a href="#">芒果知道</a></li>
+				  <li>-<a href="#">港澳专区</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- whychoice结束 -->
+	<div class="advant w978">
+		<h2>芒果优势</h2>
+		<ul>
+		  <li><strong class=ff>丰富</strong><em class=w141>全系列数万种旅游产品<br>翔实全面的旅游资讯</em></li>
+		  <li><strong class=pz>品质</strong><em class=w201>高品质的旅游产品<br>专业旅游顾问提供周到细致的服务</em></li>
+		  <li><strong class=cx>诚信</strong><em class=w174>诚信服务，履行先行赔付承诺<br>保证你出行无忧</em></li>
+		  <li><strong class=bj>便捷</strong><em class=w186>支持灵活多样的预订支付方式<br>365天7*24小时网站与呼叫中心服务</em></li>
+		</ul>
+	</div><!-- 芒果优势结束 -->
+	<div class="addtowb w980">
+		<span>您还可以这样联系我们 :）</span>
+		<a class=sinawb href="#">新浪微博</a>
+		<a class=tcwb href="#">腾讯微博</a>
+		<a class=qqzone href="#">qq空间</a>
+	</div>
+	<div class="footer w980">
+		<p><a href="#" target=_top>关于芒果</a> | <a href="#" target=_top>网站导航</a> | <a href="#">广告服务</a> | <a href="#">商务合作</a> | <a href="#">芒果新闻</a> | <a href="#">代理合作</a> | <a href="#">法律声明</a> | <a href="#">芒果招聘</a> | <a href="#">联系我们</a> | <a href="#">友情链接</a></p>
+		<p><span class=engtext>copyright© 2005-2011, mangocity.com. all rights reserved.</span> 芒果网 版权所有&nbsp;&nbsp;<a href="#">icp证：粤b2-20100355</a></p>
+		<div>
+			<img src="images/cts.jpg" width=145 height=38></li> <a href="#"><img alt=深圳公安网上便民服务中心 src="images/wangan.gif" width=30 height=40></a> <a href="#" ><img alt=备案验证信息 src="images/sznet110anwang.gif" width=35 height=40></a> <a href="#" ><img alt=经营性网站备案信息 src="images/biaoshi.gif" width=40 height=40></a><a href="#"><img alt="网信编码:1618815109 " src="images/wangxin.gif" width=40 height=40></a> 
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<script>
+window.onload=function(){
+var oMain=document.getElementById('main'),
+oLis=oMain.getElementsByTagName('a');
+for (var i = 0; i < oLis.length; i++) {
+oLis[i].onmouseover=function(){
+var _this=this.getElementsByTagName('i')[0];
+startMove(_this,{top:-20,opacity:0},function(){
+_this.style.top=30+'px';
+startMove(_this,{top:20,opacity:100})
+});
+};
+}
+
+}
+</script>
